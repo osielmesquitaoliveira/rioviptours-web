@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rioviptours.com.br/sitemap.xml
