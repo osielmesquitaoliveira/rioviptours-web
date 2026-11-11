@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rio VIP Tours | Motorista Executivo Privativo & Receptivo no Rio de Janeiro</title>
+    <meta name="description" content="Transporte executivo privativo no Rio de Janeiro aos sábados e domingos. Diárias de 6h e 12h, City Tours personalizados e Transfer Aeroporto (GIG/SDU) em Sedan Executivo com vidros filmados e mala de 519L.">
+    <link rel="canonical" href="https://rioviptours.com.br/">
+
+    <!-- Open Graph / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rioviptours.com.br/">
+    <meta property="og:title" content="Rio VIP Tours | Motorista Executivo Privativo no RJ">
+    <meta property="og:description" content="Diárias executivas de 6h e 12h, City Tours sob medida e Transfers de Aeroporto (GIG/SDU) com segurança, discrição e conforto.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
+
+    <!-- TOP BAR: DISPONIBILIDADE & CONTATO DIRETO -->
+    <div class="bg-slate-900 border-b border-slate-800 px-4 py-2 text-xs">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2 text-amber-400 font-medium">
+                <i data-lucide="calendar-clock" class="w-4 h-4"></i>
+                <span id="topBarSchedule">Atendimento Exclusivo aos Sábados e Domingos (Com Agendamento Prévio)</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/5521973541496" target="_blank" class="text-slate-300 hover:text-white transition flex items-center gap-1 font-medium">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    <span>+55 (21) 97354-1496</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <!-- Brand -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-slate-950 font-serif font-bold text-lg shadow-md">
+                    RV
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-lg sm:text-xl tracking-tight text-white block leading-none">RIO VIP TOURS</span>
+                    <span class="text-[11px] uppercase tracking-widest text-amber-400 font-medium block mt-1" id="navSubtitle">Transporte Executivo Privativo</span>
+                </div>
+            </a>
+
+            <!-- Links Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#servicos" class="hover:text-amber-400 transition" id="navServices">Diárias & Serviços</a>
+                <a href="#veiculo" class="hover:text-amber-400 transition" id="navVehicle">Padrão do Veículo</a>
+                <a href="#roteiros" class="hover:text-amber-400 transition" id="navRoutes">Sugestões de Roteiros</a>
+                <a href="#contato" class="hover:text-amber-400 transition" id="navContact">Solicitar Orçamento</a>
+            </nav>
+
+            <!-- Language Switcher -->
+            <div class="flex items-center gap-3">
+                <div class="bg-slate-900 border border-slate-800 rounded-lg p-1 flex items-center text-xs font-bold">
+                    <button onclick="setLang('pt')" id="lang-pt" class="px-2.5 py-1 rounded-md bg-amber-500 text-slate-950 transition">PT</button>
+                    <button onclick="setLang('en')" id="lang-en" class="px-2.5 py-1 rounded-md text-slate-400 hover:text-white transition">EN</button>
+                    <button onclick="setLang('es')" id="lang-es" class="px-2.5 py-1 rounded-md text-slate-400 hover:text-white transition">ES</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden py-16 sm:py-24 border-b border-slate-900">
+        <!-- Imagem real de fundo do Rio de Janeiro com filtro escuro elegante -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Rio de Janeiro" 
+                 class="w-full h-full object-cover opacity-25">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-slate-950/60"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700 text-amber-400 text-xs font-semibold tracking-wide uppercase">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <span id="heroBadge">Atendimento Privativo • Sábados e Domingos</span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight" id="heroTitle">
+                Motorista Executivo Particular no Rio de Janeiro
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto" id="heroSubtitle">
+                Explore o Rio no seu próprio ritmo ou faça seu transfer de aeroporto (Galeão e Santos Dumont) com total segurança, pontualidade e um Sedan Executivo à sua inteira disposição.
+            </p>
+
+            <!-- Destaques Rápidos -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto pt-2 text-left">
+                <div class="bg-slate-900/80 backdrop-blur border border-slate-800 p-3.5 rounded-xl flex items-center gap-3">
+                    <i data-lucide="clock" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                    <div class="text-xs">
+                        <strong class="block text-white" id="hFeat1Title">Diárias de 6h ou 12h</strong>
+                        <span class="text-slate-400" id="hFeat1Sub">Carro 100% à disposição</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900/80 backdrop-blur border border-slate-800 p-3.5 rounded-xl flex items-center gap-3">
+                    <i data-lucide="plane-landing" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                    <div class="text-xs">
+                        <strong class="block text-white" id="hFeat2Title">Receptivo Aeroportos</strong>
+                        <span class="text-slate-400" id="hFeat2Sub">Galeão (GIG) e SDU</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900/80 backdrop-blur border border-slate-800 p-3.5 rounded-xl flex items-center gap-3">
+                    <i data-lucide="lock" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                    <div class="text-xs">
+                        <strong class="block text-white" id="hFeat3Title">Vidros Filmados & 519L</strong>
+                        <span class="text-slate-400" id="hFeat3Sub">Privacidade e amplo mala</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#contato" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-7 py-4 rounded-xl shadow-lg shadow-emerald-500/20 transition text-base">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <span id="heroBtnPrimary">Consultar Disponibilidade no WhatsApp</span>
+                </a>
+                <a href="#servicos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-6 py-4 rounded-xl transition text-base">
+                    <span id="heroBtnSecondary">Como Funcionam as Diárias</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 1: COMO FUNCIONAM AS DIÁRIAS E SERVIÇOS (SEM PREÇOS EXPOSTOS) -->
+    <section id="servicos" class="py-16 sm:py-20 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <span class="text-amber-400 font-bold text-xs uppercase tracking-widest" id="srvPreTitle">Modalidades de Atendimento</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white" id="srvMainTitle">Um Motorista Particular Dedicado ao Seu Roteiro</h2>
+                <p class="text-slate-400 text-sm" id="srvMainSub">
+                    Atendemos exclusivamente aos sábados e domingos, oferecendo flexibilidade total de horários para casais, famílias (até 3 ou 4 passageiros) e executivos.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Diária 6 Horas -->
+                <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-6 hover:border-amber-500/40 transition">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                            <i data-lucide="sun" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-400" id="c1Tag">Meio Período • Sáb ou Dom</span>
+                            <h3 class="font-serif text-xl font-bold text-white mt-1" id="c1Title">Diária Executiva de 6 Horas</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed" id="c1Desc">
+                            Ideal para conhecer os principais pontos turísticos da Zona Sul e Centro com calma, fazer um passeio gastronômico ou combinar um tour panorâmico com embarque/desembarque no aeroporto.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> <span id="c1Item1">Motorista aguardando na porta de cada parada</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> <span id="c1Item2">Liberdade para alterar o tempo em cada local</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> <span id="c1Item3">Embarque no seu hotel ou aeroporto</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPresetService('Diária Executiva de 6 Horas')" class="w-full bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white font-semibold py-3 rounded-xl transition text-xs flex items-center justify-center gap-2">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <span id="c1Btn">Solicitar Cotação (6 Horas)</span>
+                    </button>
+                </div>
+
+                <!-- Card 2: Diária 12 Horas -->
+                <div class="bg-gradient-to-b from-slate-900 to-slate-900/90 border-2 border-amber-500/50 rounded-2xl p-6 flex flex-col justify-between space-y-6 shadow-xl relative">
+                    <div class="absolute -top-3 right-6 bg-amber-500 text-slate-950 font-extrabold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full" id="c2Popular">
+                        Experiência Completa
+                    </div>
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+                            <i data-lucide="compass" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-400" id="c2Tag">Dia Inteiro • Sáb ou Dom</span>
+                            <h3 class="font-serif text-xl font-bold text-white mt-1" id="c2Title">Diária Executiva de 12 Horas</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed" id="c2Desc">
+                            Um dia inteiro sem preocupações no Rio de Janeiro. Perfeito para unir os cartões-postais pela manhã, almoço especial, pôr do sol e jantar/programação noturna com retorno seguro ao hotel.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> <span id="c2Item1">Até 12 horas contínuas de disponibilidade</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> <span id="c2Item2">Pode incluir Receptivo de Aeroporto + Passeios</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> <span id="c2Item3">Segurança total para passeios diurnos e noturnos</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPresetService('Diária Executiva de 12 Horas')" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded-xl transition text-xs flex items-center justify-center gap-2">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <span id="c2Btn">Solicitar Cotação (12 Horas)</span>
+                    </button>
+                </div>
+
+                <!-- Card 3: Transfer Aeroporto + Passeio -->
+                <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-6 hover:border-amber-500/40 transition">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400">
+                            <i data-lucide="plane" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-teal-400" id="c3Tag">Galeão (GIG) & Santos Dumont (SDU)</span>
+                            <h3 class="font-serif text-xl font-bold text-white mt-1" id="c3Title">Transfer Aeroporto & Receptivo</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed" id="c3Desc">
+                            Chegue ou saia do Rio no fim de semana com tranquilidade. Buscamos você no desembarque ou no hotel com amplo porta-malas de 519 litros para acomodar suas bagagens com folga.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> <span id="c3Item1">Acompanhamento do horário do seu voo</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> <span id="c3Item2">Porta-malas gigante de 519L para malas grandes</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> <span id="c3Item3">Opção de Guia Credenciada CADASTUR sob consulta</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPresetService('Transfer Aeroporto (GIG / SDU)')" class="w-full bg-slate-800 hover:bg-teal-500 hover:text-slate-950 text-white font-semibold py-3 rounded-xl transition text-xs flex items-center justify-center gap-2">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <span id="c3Btn">Solicitar Cotação de Transfer</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: PADRÃO DO VEÍCULO (SEM FOTOS FALSAS DE BANCO DE IMAGENS) -->
+    <section id="veiculo" class="py-16 sm:py-20 bg-slate-900/50 border-y border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Coluna Esquerda: Especificações Reais -->
+                <div class="lg:col-span-6 space-y-5">
+                    <span class="text-amber-400 font-bold text-xs uppercase tracking-widest" id="vehPreTitle">Conforto, Discrição & Segurança</span>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white leading-tight" id="vehMainTitle">
+                        Estrutura de Sedan Executivo Pensada para o Passageiro
+                    </h2>
+                    <p class="text-slate-400 text-sm leading-relaxed" id="vehMainDesc">
+                        Não trabalhamos com carros compactos nem veículos com adesivos turísticos chamativos. Você viaja com total discrição em um Sedan Executivo moderno, rigorosamente higienizado a cada saída e preparado para o clima do Rio de Janeiro.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl flex items-start gap-3.5">
+                            <div class="p-2.5 rounded-lg bg-amber-500/10 text-amber-400 shrink-0">
+                                <i data-lucide="shield" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm" id="vSpec1Title">Vidros Filmados</h4>
+                                <p class="text-xs text-slate-400 mt-1" id="vSpec1Desc">Película escura de proteção térmica e privacidade total para você relaxar no trânsito.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl flex items-start gap-3.5">
+                            <div class="p-2.5 rounded-lg bg-teal-500/10 text-teal-400 shrink-0">
+                                <i data-lucide="luggage" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm" id="vSpec2Title">Porta-Malas de 519 Litros</h4>
+                                <p class="text-xs text-slate-400 mt-1" id="vSpec2Desc">Um dos maiores da categoria sedan, acomodando malas de aeroporto ou compras com folga.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl flex items-start gap-3.5">
+                            <div class="p-2.5 rounded-lg bg-amber-500/10 text-amber-400 shrink-0">
+                                <i data-lucide="battery-charging" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm" id="vSpec3Title">Carregadores a Bordo</h4>
+                                <p class="text-xs text-slate-400 mt-1" id="vSpec3Desc">Cabos disponíveis para manter seu celular sempre carregado entre uma foto e outra.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl flex items-start gap-3.5">
+                            <div class="p-2.5 rounded-lg bg-teal-500/10 text-teal-400 shrink-0">
+                                <i data-lucide="sparkles" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm" id="vSpec4Title">Higienização & Ar Digital</h4>
+                                <p class="text-xs text-slate-400 mt-1" id="vSpec4Desc">Cabine sanitizada toda semana, água mineral fresca e ar-condicionado sempre gelando.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Painel Técnico Elegante (Sem Fotos Falsas) -->
+                <div class="lg:col-span-6">
+                    <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                            <div>
+                                <span class="text-[11px] uppercase tracking-widest text-amber-400 font-bold block" id="panelTag">Ficha de Conforto & Segurança</span>
+                                <h3 class="font-serif text-xl font-bold text-white mt-0.5" id="panelTitle">Padrão Sedan Executivo</h3>
+                            </div>
+                            <div class="w-11 h-11 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400">
+                                <i data-lucide="car-front" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+
+                        <!-- Indicadores Técnicos Reais -->
+                        <div class="grid grid-cols-3 gap-3 text-center">
+                            <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-3.5">
+                                <span class="text-2xl font-extrabold text-white block">519 L</span>
+                                <span class="text-[11px] text-slate-400" id="stat1Label">Volume de Mala</span>
+                            </div>
+                            <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-3.5">
+                                <span class="text-2xl font-extrabold text-amber-400 block">100%</span>
+                                <span class="text-[11px] text-slate-400" id="stat2Label">Vidros Filmados</span>
+                            </div>
+                            <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-3.5">
+                                <span class="text-2xl font-extrabold text-teal-400 block">VIP</span>
+                                <span class="text-[11px] text-slate-400" id="stat3Label">Sem Adesivos</span>
+                            </div>
+                        </div>
+
+                        <!-- Checklist de Bordo -->
+                        <div class="bg-slate-950/70 border border-slate-800/80 rounded-2xl p-4 space-y-2.5 text-xs text-slate-300">
+                            <div class="font-bold text-white uppercase tracking-wider text-[11px] mb-1" id="boardChecklistTitle">O que está sempre incluído no veículo:</div>
+                            <div class="flex items-center justify-between py-1 border-b border-slate-900">
+                                <span id="bItem1">Combustível para o roteiro combinado</span>
+                                <span class="text-emerald-400 font-semibold">✓ Incluso</span>
+                            </div>
+                            <div class="flex items-center justify-between py-1 border-b border-slate-900">
+                                <span id="bItem2">Água mineral e balas a bordo</span>
+                                <span class="text-emerald-400 font-semibold">✓ Incluso</span>
+                            </div>
+                            <div class="flex items-center justify-between py-1 border-b border-slate-900">
+                                <span id="bItem3">Carregadores para iPhone e Android (Type-C)</span>
+                                <span class="text-emerald-400 font-semibold">✓ Incluso</span>
+                            </div>
+                            <div class="flex items-center justify-between py-1">
+                                <span id="bItem4">Opção de Guia Credenciada CADASTUR (Sob consulta)</span>
+                                <span class="text-amber-400 font-semibold" id="bItem4Val">Opcional</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: SUGESTÕES DE ROTEIROS (INSPIRAÇÃO PARA AS DIÁRIAS) -->
+    <section id="roteiros" class="py-16 sm:py-20 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <span class="text-teal-400 font-bold text-xs uppercase tracking-widest" id="routesPreTitle">Sugestões para a Sua Diária</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white" id="routesMainTitle">Você Escolhe o Destino, Nós Cuidamos do Caminho</h2>
+                <p class="text-slate-400 text-sm" id="routesMainSub">
+                    Durante a sua diária de 6h ou 12h, você pode montar o seu próprio trajeto ou seguir uma das nossas sugestões clássicas pelo Rio de Janeiro:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Sugestão 1 -->
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden flex flex-col sm:flex-row">
+                    <div class="sm:w-2/5 h-48 sm:h-auto relative">
+                        <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?auto=format&fit=crop&w=600&q=80" 
+                             alt="Cristo Redentor e Pão de Açúcar" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="sm:w-3/5 p-6 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="text-[11px] font-bold uppercase text-teal-400" id="r1Tag">Sugestão Diurna</span>
+                            <h3 class="font-serif text-lg font-bold text-white mt-0.5" id="r1Title">Clássicos do Rio & Cartões-Postais</h3>
+                            <p class="text-xs text-slate-400 mt-2 leading-relaxed" id="r1Desc">
+                                Cristo Redentor (Paineiras), charme de Santa Teresa, Escadaria Selarón, Bondinho do Pão de Açúcar e passeio panorâmico pelas praias da Zona Sul.
+                            </p>
+                        </div>
+                        <button onclick="selectPresetService('Diária com Roteiro Clássicos do Rio (Dia)')" class="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1">
+                            <span id="r1Link">Planejar este roteiro no WhatsApp</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sugestão 2 -->
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden flex flex-col sm:flex-row">
+                    <div class="sm:w-2/5 h-48 sm:h-auto relative">
+                        <img src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?auto=format&fit=crop&w=600&q=80" 
+                             alt="Pôr do sol no Rio de Janeiro" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="sm:w-3/5 p-6 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="text-[11px] font-bold uppercase text-amber-400" id="r2Tag">Sugestão Tarde / Noite</span>
+                            <h3 class="font-serif text-lg font-bold text-white mt-0.5" id="r2Title">Rio Sunset, Gastronomia & Boemia</h3>
+                            <p class="text-xs text-slate-400 mt-2 leading-relaxed" id="r2Desc">
+                                Pôr do sol na Urca, Centro Histórico ao entardecer e noite segura em restaurantes, casas de samba ou Bossa Nova com o motorista aguardando na porta.
+                            </p>
+                        </div>
+                        <button onclick="selectPresetService('Diária com Roteiro Sunset & Noite Carioca')" class="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1">
+                            <span id="r2Link">Planejar este roteiro no WhatsApp</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: SOLICITAÇÃO RÁPIDA DIRETO PARA O WHATSAPP (SEM VALORES / SEM CHECKOUT) -->
+    <section id="contato" class="py-16 sm:py-24 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/80">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6">
+                <div class="text-center space-y-2">
+                    <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest" id="formPreTitle">Atendimento Direto & Personalizado</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white" id="formMainTitle">Consulte Disponibilidade pelo WhatsApp</h2>
+                    <p class="text-slate-400 text-xs sm:text-sm" id="formMainSub">
+                        Informe os detalhes básicos da sua necessidade (Sábado ou Domingo) para iniciarmos a conversa no WhatsApp com todas as informações.
+                    </p>
+                </div>
+
+                <!-- Formulário Simples que apenas monta a mensagem para o WhatsApp -->
+                <div class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5" id="fLabelService">
+                                Tipo de Serviço Desejado
+                            </label>
+                            <select id="waService" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                                <option value="Diária Executiva de 6 Horas" id="fOpt1">Diária Executiva de 6 Horas</option>
+                                <option value="Diária Executiva de 12 Horas" id="fOpt2">Diária Executiva de 12 Horas</option>
+                                <option value="Transfer Aeroporto (GIG / SDU)" id="fOpt3">Transfer Aeroporto (Galeão / Santos Dumont)</option>
+                                <option value="Diária + Guia de Turismo CADASTUR" id="fOpt4">Diária Executiva + Guia Credenciada</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5" id="fLabelDay">
+                                Dia de Preferência (Fim de Semana)
+                            </label>
+                            <select id="waDay" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                                <option value="Sábado" id="fDay1">Sábado</option>
+                                <option value="Domingo" id="fDay2">Domingo</option>
+                                <option value="Sábado e Domingo (Fim de Semana Completo)" id="fDay3">Sábado e Domingo (Fim de Semana)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Busca Inteligente de Hotel ou Bairro (Sem exibir taxas na tela) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="relative">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5" id="fLabelLocation">
+                                Local de Embarque (Hotel, Bairro ou Aeroporto)
+                            </label>
+                            <div class="relative flex items-center">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 absolute left-3.5 pointer-events-none"></i>
+                                <input type="text" id="waLocation" autocomplete="off"
+                                       oninput="handleHotelAutocomplete(this.value)"
+                                       onfocus="handleHotelAutocomplete(this.value)"
+                                       placeholder="Ex: Copacabana, Barra, Aeroporto Galeão..."
+                                       class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-10 pr-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500">
+                            </div>
+                            <div id="hotelSuggestions" class="hidden absolute left-0 right-0 top-full mt-1 bg-slate-950 border border-slate-700 rounded-xl shadow-2xl z-40 max-h-48 overflow-y-auto divide-y divide-slate-800"></div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5" id="fLabelPax">
+                                Quantidade de Passageiros / Malas
+                            </label>
+                            <input type="text" id="waPax" placeholder="Ex: 2 adultos (sem malas / com 2 malas)"
+                                   class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="button" onclick="openWhatsAppDirect()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-4 px-6 rounded-xl shadow-lg shadow-emerald-500/20 transition flex items-center justify-center gap-2 text-base">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span id="btnSendWa">Iniciar Atendimento no WhatsApp</span>
+                        </button>
+                        <p class="text-center text-[11px] text-slate-400 mt-2.5" id="waDirectNote">
+                            Você falará diretamente conosco pelo número oficial <strong>+55 (21) 97354-1496</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-10 text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <span class="font-serif font-bold text-white text-sm">RIO VIP TOURS</span>
+                <span> • rioviptours.com.br • Transporte Executivo & Receptivo no RJ</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/5521973541496" target="_blank" class="text-emerald-400 hover:underline font-semibold">
+                    WhatsApp: +55 (21) 97354-1496
+                </a>
+                <span>Sábados e Domingos</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        const OFFICIAL_WHATSAPP = "5521973541496";
+        let currentLang = 'pt';
+
+        // Sugestões rápidas de hotéis/aeroportos do Rio para facilitar a digitação do cliente
+        const QUICK_PLACES_RJ = [
+            "Aeroporto Internacional do Galeão (GIG)",
+            "Aeroporto Santos Dumont (SDU)",
+            "Copacabana (Zona Sul)",
+            "Ipanema / Leblon (Zona Sul)",
+            "Barra da Tijuca / Recreio",
+            "Botafogo / Flamengo / Leme",
+            "Centro / Santa Teresa",
+            "Belmond Copacabana Palace",
+            "Hilton Copacabana",
+            "Windsor Barra Hotel",
+            "Grand Hyatt Rio de Janeiro",
+            "Sheraton Grand Rio"
+        ];
+
+        function handleHotelAutocomplete(val) {
+            const box = document.getElementById('hotelSuggestions');
+            const q = (val || '').trim().toLowerCase();
+            const matches = QUICK_PLACES_RJ.filter(p => p.toLowerCase().includes(q)).slice(0, 6);
+
+            if (matches.length === 0) {
+                box.classList.add('hidden');
+                return;
+            }
+
+            box.innerHTML = matches.map(place => `
+                <button type="button" onclick="pickPlace('${place}')" class="w-full text-left px-3.5 py-2 text-xs text-slate-200 hover:bg-slate-800 transition flex items-center gap-2">
+                    <span>📍</span> <span>${place}</span>
+                </button>
+            `).join('');
+            box.classList.remove('hidden');
+        }
+
+        function pickPlace(place) {
+            document.getElementById('waLocation').value = place;
+            document.getElementById('hotelSuggestions').classList.add('hidden');
+        }
+
+        document.addEventListener('click', (e) => {
+            const box = document.getElementById('hotelSuggestions');
+            if (box && !e.target.closest('#waLocation') && !e.target.closest('#hotelSuggestions')) {
+                box.classList.add('hidden');
+            }
+        });
+
+        function selectPresetService(serviceName) {
+            const select = document.getElementById('waService');
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].value === serviceName) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+            document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openWhatsAppDirect() {
+            const service = document.getElementById('waService').value;
+            const day = document.getElementById('waDay').value;
+            const location = document.getElementById('waLocation').value.trim() || 'A informar';
+            const pax = document.getElementById('waPax').value.trim() || 'A informar';
+
+            let msg = '';
+            if (currentLang === 'en') {
+                msg = `Hello! I visited *rioviptours.com.br* and would like to check availability and rates for a private driver:\n\n` +
+                      `• *Service:* ${service}\n` +
+                      `• *Preferred Day:* ${day}\n` +
+                      `• *Pickup Location / Airport:* ${location}\n` +
+                      `• *Passengers / Luggage:* ${pax}`;
+            } else if (currentLang === 'es') {
+                msg = `¡Hola! Visité *rioviptours.com.br* y me gustaría consultar disponibilidad y tarifa para conductor privado:\n\n` +
+                      `• *Servicio:* ${service}\n` +
+                      `• *Día de Preferencia:* ${day}\n` +
+                      `• *Lugar de Embarque / Aeropuerto:* ${location}\n` +
+                      `• *Pasajeros / Equipaje:* ${pax}`;
+            } else {
+                msg = `Olá! Acessei o site *rioviptours.com.br* e gostaria de consultar disponibilidade e valores:\n\n` +
+                      `• *Serviço:* ${service}\n` +
+                      `• *Dia de Preferência:* ${day}\n` +
+                      `• *Local de Embarque / Aeroporto:* ${location}\n` +
+                      `• *Passageiros / Bagagem:* ${pax}`;
+            }
+
+            window.open(`https://wa.me/${OFFICIAL_WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        const i18n = {
+            pt: {
+                topBarSchedule: "Atendimento Exclusivo aos Sábados e Domingos (Com Agendamento Prévio)",
+                navSubtitle: "Transporte Executivo Privativo",
+                navServices: "Diárias & Serviços",
+                navVehicle: "Padrão do Veículo",
+                navRoutes: "Sugestões de Roteiros",
+                navContact: "Solicitar Orçamento",
+                heroBadge: "Atendimento Privativo • Sábados e Domingos",
+                heroTitle: "Motorista Executivo Particular no Rio de Janeiro",
+                heroSubtitle: "Explore o Rio no seu próprio ritmo ou faça seu transfer de aeroporto (Galeão e Santos Dumont) com total segurança, pontualidade e um Sedan Executivo à sua inteira disposição.",
+                hFeat1Title: "Diárias de 6h ou 12h",
+                hFeat1Sub: "Carro 100% à disposição",
+                hFeat2Title: "Receptivo Aeroportos",
+                hFeat2Sub: "Galeão (GIG) e SDU",
+                hFeat3Title: "Vidros Filmados & 519L",
+                hFeat3Sub: "Privacidade e amplo mala",
+                heroBtnPrimary: "Consultar Disponibilidade no WhatsApp",
+                heroBtnSecondary: "Como Funcionam as Diárias",
+                srvPreTitle: "Modalidades de Atendimento",
+                srvMainTitle: "Um Motorista Particular Dedicado ao Seu Roteiro",
+                srvMainSub: "Atendemos exclusivamente aos sábados e domingos, oferecendo flexibilidade total de horários para casais, famílias e executivos.",
+                c1Tag: "Meio Período • Sáb ou Dom",
+                c1Title: "Diária Executiva de 6 Horas",
+                c1Desc: "Ideal para conhecer os principais pontos turísticos da Zona Sul e Centro com calma, fazer um passeio gastronômico ou combinar um tour com embarque/desembarque no aeroporto.",
+                c1Item1: "Motorista aguardando na porta de cada parada",
+                c1Item2: "Liberdade para alterar o tempo em cada local",
+                c1Item3: "Embarque no seu hotel ou aeroporto",
+                c1Btn: "Solicitar Cotação (6 Horas)",
+                c2Popular: "Experiência Completa",
+                c2Tag: "Dia Inteiro • Sáb ou Dom",
+                c2Title: "Diária Executiva de 12 Horas",
+                c2Desc: "Um dia inteiro sem preocupações no Rio de Janeiro. Perfeito para unir os cartões-postais pela manhã, almoço especial, pôr do sol e programação noturna com retorno seguro.",
+                c2Item1: "Até 12 horas contínuas de disponibilidade",
+                c2Item2: "Pode incluir Receptivo de Aeroporto + Passeios",
+                c2Item3: "Segurança total para passeios diurnos e noturnos",
+                c2Btn: "Solicitar Cotação (12 Horas)",
+                c3Tag: "Galeão (GIG) & Santos Dumont (SDU)",
+                c3Title: "Transfer Aeroporto & Receptivo",
+                c3Desc: "Chegue ou saia do Rio no fim de semana com tranquilidade. Buscamos você no desembarque ou no hotel com amplo porta-malas de 519 litros para acomodar suas bagagens com folga.",
+                c3Item1: "Acompanhamento do horário do seu voo",
+                c3Item2: "Porta-malas gigante de 519L para malas grandes",
+                c3Item3: "Opção de Guia Credenciada CADASTUR sob consulta",
+                c3Btn: "Solicitar Cotação de Transfer",
+                vehPreTitle: "Conforto, Discrição & Segurança",
+                vehMainTitle: "Estrutura de Sedan Executivo Pensada para o Passageiro",
+                vehMainDesc: "Não trabalhamos com carros compactos nem veículos com adesivos turísticos chamativos. Você viaja com total discrição em um Sedan Executivo moderno, rigorosamente higienizado e preparado para o clima do Rio.",
+                vSpec1Title: "Vidros Filmados",
+                vSpec1Desc: "Película escura de proteção térmica e privacidade total para você relaxar no trânsito.",
+                vSpec2Title: "Porta-Malas de 519 Litros",
+                vSpec2Desc: "Um dos maiores da categoria sedan, acomodando malas de aeroporto ou compras com folga.",
+                vSpec3Title: "Carregadores a Bordo",
+                vSpec3Desc: "Cabos disponíveis para manter seu celular sempre carregado entre uma foto e outra.",
+                vSpec4Title: "Higienização & Ar Digital",
+                vSpec4Desc: "Cabine sanitizada toda semana, água mineral fresca e ar-condicionado sempre gelando.",
+                panelTag: "Ficha de Conforto & Segurança",
+                panelTitle: "Padrão Sedan Executivo",
+                stat1Label: "Volume de Mala",
+                stat2Label: "Vidros Filmados",
+                stat3Label: "Sem Adesivos",
+                boardChecklistTitle: "O que está sempre incluído no veículo:",
+                bItem1: "Combustível para o roteiro combinado",
+                bItem2: "Água mineral e balas a bordo",
+                bItem3: "Carregadores para iPhone e Android (Type-C)",
+                bItem4: "Opção de Guia Credenciada CADASTUR (Sob consulta)",
+                bItem4Val: "Opcional",
+                routesPreTitle: "Sugestões para a Sua Diária",
+                routesMainTitle: "Você Escolhe o Destino, Nós Cuidamos do Caminho",
+                routesMainSub: "Durante a sua diária de 6h ou 12h, você pode montar o seu próprio trajeto ou seguir uma das nossas sugestões clássicas pelo Rio:",
+                r1Tag: "Sugestão Diurna",
+                r1Title: "Clássicos do Rio & Cartões-Postais",
+                r1Desc: "Cristo Redentor (Paineiras), charme de Santa Teresa, Escadaria Selarón, Bondinho do Pão de Açúcar e passeio panorâmico pelas praias da Zona Sul.",
+                r1Link: "Planejar este roteiro no WhatsApp",
+                r2Tag: "Sugestão Tarde / Noite",
+                r2Title: "Rio Sunset, Gastronomia & Boemia",
+                r2Desc: "Pôr do sol na Urca, Centro Histórico ao entardecer e noite segura em restaurantes, casas de samba ou Bossa Nova com o motorista aguardando na porta.",
+                r2Link: "Planejar este roteiro no WhatsApp",
+                formPreTitle: "Atendimento Direto & Personalizado",
+                formMainTitle: "Consulte Disponibilidade pelo WhatsApp",
+                formMainSub: "Informe os detalhes básicos da sua necessidade (Sábado ou Domingo) para iniciarmos a conversa no WhatsApp com todas as informações.",
+                fLabelService: "Tipo de Serviço Desejado",
+                fLabelDay: "Dia de Preferência (Fim de Semana)",
+                fLabelLocation: "Local de Embarque (Hotel, Bairro ou Aeroporto)",
+                fLabelPax: "Quantidade de Passageiros / Malas",
+                btnSendWa: "Iniciar Atendimento no WhatsApp",
+                waDirectNote: "Você falará diretamente conosco pelo número oficial +55 (21) 97354-1496."
+            },
+            en: {
+                topBarSchedule: "Exclusive Service on Saturdays & Sundays (Advance Booking Required)",
+                navSubtitle: "Private Executive Chauffeur",
+                navServices: "Packages & Services",
+                navVehicle: "Vehicle Standard",
+                navRoutes: "Suggested Itineraries",
+                navContact: "Request a Quote",
+                heroBadge: "Private Chauffeur Service • Saturdays & Sundays",
+                heroTitle: "Private Executive Driver in Rio de Janeiro",
+                heroSubtitle: "Explore Rio at your own pace or book your private airport transfer (GIG & SDU) with complete safety, punctuality, and a dedicated Executive Sedan at your disposal.",
+                hFeat1Title: "6h or 12h Packages",
+                hFeat1Sub: "Car 100% on standby for you",
+                hFeat2Title: "Airport Transfers",
+                hFeat2Sub: "Galeão (GIG) & Santos Dumont",
+                hFeat3Title: "Tinted Glass & 519L Trunk",
+                hFeat3Sub: "Privacy & spacious luggage room",
+                heroBtnPrimary: "Check Availability on WhatsApp",
+                heroBtnSecondary: "How Our Packages Work",
+                srvPreTitle: "Service Options",
+                srvMainTitle: "A Dedicated Private Chauffeur for Your Schedule",
+                srvMainSub: "Operating exclusively on Saturdays and Sundays, offering total flexibility for couples, families, and executives.",
+                c1Tag: "Half Day • Sat or Sun",
+                c1Title: "6-Hour Executive Package",
+                c1Desc: "Ideal for visiting South Zone and Downtown landmarks without rush, enjoying a culinary tour, or combining a city tour with airport pickup/drop-off.",
+                c1Item1: "Driver waiting right at the door of every stop",
+                c1Item2: "Freedom to adjust your time at each attraction",
+                c1Item3: "Pickup at your hotel or airport",
+                c1Btn: "Request a Quote (6 Hours)",
+                c2Popular: "Full Day Experience",
+                c2Tag: "Full Day • Sat or Sun",
+                c2Title: "12-Hour Executive Package",
+                c2Desc: "A carefree full day in Rio. Perfect for combining morning sights, a special lunch, sunset views, and safe evening dining/nightlife with door-to-door return.",
+                c2Item1: "Up to 12 continuous hours at your disposal",
+                c2Item2: "Can combine Airport Transfer + Private Sightseeing",
+                c2Item3: "Complete safety for daytime and evening outings",
+                c2Btn: "Request a Quote (12 Hours)",
+                c3Tag: "Galeão (GIG) & Santos Dumont (SDU)",
+                c3Title: "Private Airport Transfer",
+                c3Desc: "Arrive or depart Rio on the weekend with peace of mind. We pick you up at arrivals or your hotel with a massive 519-liter trunk for your luggage.",
+                c3Item1: "Flight arrival time monitoring",
+                c3Item2: "Extra-large 519L trunk for suitcases",
+                c3Item3: "Optional Licensed CADASTUR Tour Guide upon request",
+                c3Btn: "Request Transfer Quote",
+                vehPreTitle: "Comfort, Discretion & Safety",
+                vehMainTitle: "Executive Sedan Designed for Passenger Comfort",
+                vehMainDesc: "We do not use compact cars or vehicles with flashy tourist stickers. You travel discreetly in a modern Executive Sedan, deeply sanitized every week and equipped for Rio's climate.",
+                vSpec1Title: "Privacy Tinted Windows",
+                vSpec1Desc: "Dark heat-rejecting window film for complete privacy and comfort in city traffic.",
+                vSpec2Title: "519-Liter Trunk Capacity",
+                vSpec2Desc: "One of the largest trunks in the sedan category, fitting airport luggage with ease.",
+                vSpec3Title: "Onboard Phone Chargers",
+                vSpec3Desc: "Multi-device cables ready to keep your phones charged throughout the day.",
+                vSpec4Title: "Sanitized & Ice-Cold A/C",
+                vSpec4Desc: "Weekly cabin sanitization, complimentary cold water, and digital climate control.",
+                panelTag: "Comfort & Safety Specs",
+                panelTitle: "Executive Sedan Standard",
+                stat1Label: "Trunk Capacity",
+                stat2Label: "Tinted Windows",
+                stat3Label: "Unmarked VIP Car",
+                boardChecklistTitle: "Always included onboard:",
+                bItem1: "Fuel for the agreed itinerary",
+                bItem2: "Complimentary bottled water & mints",
+                bItem3: "Fast chargers for iPhone & Android (Type-C)",
+                bItem4: "Licensed Tour Guide (Available upon request)",
+                bItem4Val: "Optional",
+                routesPreTitle: "Ideas for Your Package",
+                routesMainTitle: "You Choose the Destination, We Handle the Drive",
+                routesMainSub: "During your 6h or 12h booking, you can customize your own route or follow one of our classic Rio suggestions:",
+                r1Tag: "Daytime Suggestion",
+                r1Title: "Rio Classics & Postcards",
+                r1Desc: "Christ the Redeemer, bohemian Santa Teresa, Selarón Steps, Sugarloaf Mountain, and a panoramic drive along Copacabana and Ipanema beaches.",
+                r1Link: "Plan this route on WhatsApp",
+                r2Tag: "Afternoon / Evening Suggestion",
+                r2Title: "Rio Sunset, Dining & Nightlife",
+                r2Desc: "Sunset at Urca, Historic Downtown at dusk, and a safe evening at top restaurants, samba venues, or Bossa Nova clubs with your driver waiting at the door.",
+                r2Link: "Plan this route on WhatsApp",
+                formPreTitle: "Direct & Personalized Service",
+                formMainTitle: "Check Availability via WhatsApp",
+                formMainSub: "Share a few details about your weekend plans (Saturday or Sunday) to start chatting directly with us on WhatsApp.",
+                fLabelService: "Preferred Service",
+                fLabelDay: "Preferred Weekend Day",
+                fLabelLocation: "Pickup Location (Hotel, Neighborhood or Airport)",
+                fLabelPax: "Number of Passengers / Luggage",
+                btnSendWa: "Start Chat on WhatsApp",
+                waDirectNote: "You will chat directly with us at +55 (21) 97354-1496."
+            },
+            es: {
+                topBarSchedule: "Atención Exclusiva Sábados y Domingos (Con Reserva Previa)",
+                navSubtitle: "Transporte Ejecutivo Privado",
+                navServices: "Diarias y Servicios",
+                navVehicle: "Estándar del Vehículo",
+                navRoutes: "Rutas Sugeridas",
+                navContact: "Solicitar Cotización",
+                heroBadge: "Servicio Privado • Sábados y Domingos",
+                heroTitle: "Conductor Ejecutivo Particular en Río de Janeiro",
+                heroSubtitle: "Explora Río a tu propio ritmo o realiza tu traslado de aeropuerto (Galeão y Santos Dumont) con total seguridad, puntualidad y un Sedán Ejecutivo a tu entera disposición.",
+                hFeat1Title: "Diarias de 6h o 12h",
+                hFeat1Sub: "Auto 100% a tu disposición",
+                hFeat2Title: "Traslado Aeropuertos",
+                hFeat2Sub: "Galeão (GIG) y SDU",
+                hFeat3Title: "Polarizado y Maletero 519L",
+                hFeat3Sub: "Privacidad y amplio espacio",
+                heroBtnPrimary: "Consultar Disponibilidad por WhatsApp",
+                heroBtnSecondary: "Cómo Funcionan las Diarias",
+                srvPreTitle: "Modalidades de Servicio",
+                srvMainTitle: "Un Conductor Particular Dedicado a Tu Recorrido",
+                srvMainSub: "Atendemos exclusivamente los sábados y domingos, ofreciendo total flexibilidad de horarios para parejas, familias y ejecutivos.",
+                c1Tag: "Medio Día • Sáb o Dom",
+                c1Title: "Diaria Ejecutiva de 6 Horas",
+                c1Desc: "Ideal para conocer los principales puntos turísticos de Zona Sur y Centro con calma, hacer un paseo gastronómico o combinar un tour con traslado al aeropuerto.",
+                c1Item1: "Conductor esperando en la puerta de cada parada",
+                c1Item2: "Libertad para ajustar el tiempo en cada lugar",
+                c1Item3: "Salida desde tu hotel o aeropuerto",
+                c1Btn: "Solicitar Cotización (6 Horas)",
+                c2Popular: "Experiencia Completa",
+                c2Tag: "Día Completo • Sáb o Dom",
+                c2Title: "Diaria Ejecutiva de 12 Horas",
+                c2Desc: "Un día entero sin preocupaciones en Río. Perfecto para unir las postales por la mañana, almuerzo especial, atardecer y paseo nocturno con regreso seguro al hotel.",
+                c2Item1: "Hasta 12 horas continuas de disponibilidad",
+                c2Item2: "Puede incluir Traslado de Aeropuerto + Paseos",
+                c2Item3: "Seguridad total para paseos diurnos y nocturnos",
+                c2Btn: "Solicitar Cotización (12 Horas)",
+                c3Tag: "Galeão (GIG) y Santos Dumont (SDU)",
+                c3Title: "Transfer Aeropuerto y Receptivo",
+                c3Desc: "Llega o sal de Río el fin de semana con tranquilidad. Te buscamos en el desembarque o en tu hotel con un amplio maletero de 519 litros para tu equipaje.",
+                c3Item1: "Seguimiento del horario de tu vuelo",
+                c3Item2: "Maletero gigante de 519L para maletas grandes",
+                c3Item3: "Opción de Guía Credenciada CADASTUR bajo consulta",
+                c3Btn: "Solicitar Cotización de Transfer",
+                vehPreTitle: "Confort, Discreción y Seguridad",
+                vehMainTitle: "Estructura de Sedán Ejecutivo Pensada para el Pasajero",
+                vehMainDesc: "No trabajamos con autos compactos ni vehículos con adhesivos turísticos llamativos. Viajas con total discreción en un Sedán Ejecutivo moderno, higienizado y preparado para el clima de Río.",
+                vSpec1Title: "Vidrios Polarizados",
+                vSpec1Desc: "Película oscura con protección térmica y privacidad total en el tránsito.",
+                vSpec2Title: "Maletero de 519 Litros",
+                vSpec2Desc: "Uno de los más grandes de la categoría sedán, ideal para equipaje de aeropuerto.",
+                vSpec3Title: "Cargadores a Bordo",
+                vSpec3Desc: "Cables disponibles para mantener tu celular siempre cargado durante el paseo.",
+                vSpec4Title: "Higienización y Aire Digital",
+                vSpec4Desc: "Cabina desinfectada cada semana, agua mineral fría y aire acondicionado helado.",
+                panelTag: "Ficha de Confort y Seguridad",
+                panelTitle: "Estándar Sedán Ejecutivo",
+                stat1Label: "Volumen Maletero",
+                stat2Label: "Vidrios Polarizados",
+                stat3Label: "Sin Adhesivos",
+                boardChecklistTitle: "Siempre incluido en el vehículo:",
+                bItem1: "Combustible para el recorrido acordado",
+                bItem2: "Agua mineral y caramelos a bordo",
+                bItem3: "Cargadores para iPhone y Android (Type-C)",
+                bItem4: "Opción de Guía Credenciada CADASTUR (Bajo consulta)",
+                bItem4Val: "Opcional",
+                routesPreTitle: "Sugerencias para Tu Diaria",
+                routesMainTitle: "Tú Eliges el Destino, Nosotros Cuidamos el Camino",
+                routesMainSub: "Durante tu diaria de 6h o 12h, puedes armar tu propio recorrido o seguir una de nuestras sugerencias clásicas por Río:",
+                r1Tag: "Sugerencia Diurna",
+                r1Title: "Clásicos de Río y Postales",
+                r1Desc: "Cristo Redentor, encanto de Santa Teresa, Escalera Selarón, Pan de Azúcar y paseo panorámico por las playas de Zona Sur.",
+                r1Link: "Planificar este recorrido por WhatsApp",
+                r2Tag: "Sugerencia Tarde / Noche",
+                r2Title: "Río Sunset, Gastronomía y Bohemia",
+                r2Desc: "Atardecer en Urca, Centro Histórico y noche segura en restaurantes, casas de samba o Bossa Nova con el conductor esperando en la puerta.",
+                r2Link: "Planificar este recorrido por WhatsApp",
+                formPreTitle: "Atención Directa y Personalizada",
+                formMainTitle: "Consulta Disponibilidad por WhatsApp",
+                formMainSub: "Indica los detalles básicos de tu necesidad (Sábado o Domingo) para iniciar la conversación por WhatsApp.",
+                fLabelService: "Tipo de Servicio Deseado",
+                fLabelDay: "Día de Preferencia (Fin de Semana)",
+                fLabelLocation: "Lugar de Embarque (Hotel, Barrio o Aeropuerto)",
+                fLabelPax: "Cantidad de Pasajeros / Maletas",
+                btnSendWa: "Iniciar Atención por WhatsApp",
+                waDirectNote: "Hablarás directamente con nosotros al número oficial +55 (21) 97354-1496."
+            }
+        };
+
+        function setLang(lang) {
+            currentLang = lang;
+            ['pt', 'en', 'es'].forEach(l => {
+                const btn = document.getElementById('lang-' + l);
+                btn.className = (l === lang)
+                    ? 'px-2.5 py-1 rounded-md bg-amber-500 text-slate-950 transition'
+                    : 'px-2.5 py-1 rounded-md text-slate-400 hover:text-white transition';
+            });
+
+            const t = i18n[lang];
+            Object.keys(t).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.innerText = t[id];
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof window.lucide !== 'undefined') {
+                window.lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>
